@@ -16,7 +16,7 @@ I am currently a student learning backend development. My goal is to build a str
 ## Projects
 This repository will include the following projects:
 - **Edabit Projects**: A few projects and practices from Edabit.com
-- **Book Projects**: A few exercies and practices based on books such as Exercise for Programmers by Brian P. Hogan and others
+- **Book Projects**: A few exercies and practices based on JavaScript programming books
 - **Class Projects**: Projects and practices done in class
 
 *(Adding more projects as I go)*
