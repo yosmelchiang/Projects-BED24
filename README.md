@@ -11,13 +11,13 @@ This repo is dedicated to my journey through backend development during my first
 
 
 ## About Me
-I am currently a student learning backend development. My goal is to build a strong foundation in backend technologies and create functional applications that can solve real-world problems.
+I am currently a student learning backend development. My goal is to build a strong foundation in backend technologies and learn how to create functional applications.
 
 ## Projects
 This repository will include the following projects:
-- **Edabit Projects**: A few projects and practices from Edabit.com
-- **Book Projects**: A few exercies and practices based on JavaScript programming books
-- **Class Projects**: Projects and practices done in class
+- **Edabit Projects**: A few projects and practices from Edabit.com.
+- **Book Projects**: A few exercies and practices based on JavaScript programming books.
+- **Class Projects**: Projects and practices done in class.
 
 *(Adding more projects as I go)*
 
