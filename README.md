@@ -1,6 +1,6 @@
 # Backend Development Projects
 
-Welcome to my repository! This repo is dedicated to my journey through backend development during my first year of study. Here, you'll find various projects I've created to practice and enhance my skills in backend technologies.
+This repo is dedicated to my journey through backend development during my first year of study. Here, you'll find various projects I've created to practice and enhance my skills in backend technologies.
 
 ## Table of Contents
 - [About Me](#about-me)
