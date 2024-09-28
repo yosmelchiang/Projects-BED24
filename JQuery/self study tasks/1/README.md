@@ -1,3 +1,5 @@
+## Create a jquery_lesson.js file that:
+
 - sets the background colour of all classA elements to green;
 
 - changes the font size of all paragraphs to 20px;
