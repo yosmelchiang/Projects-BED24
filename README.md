@@ -27,7 +27,7 @@ To get a copy of this repository running on your local machine, follow these ste
  
  Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/yosmelchiang/Projects-BED24.git
 ```
 
 ## Contributing
