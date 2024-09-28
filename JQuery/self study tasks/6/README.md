@@ -1,0 +1,1 @@
+Create a jquery_lesson.js file which hides all paragraphs on their click.

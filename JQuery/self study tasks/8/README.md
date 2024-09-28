@@ -1,0 +1,1 @@
+Make the button slowly fade to 0.4 on double click.

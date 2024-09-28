@@ -1,0 +1,1 @@
+Create a jquery_lesson.js file that makes our On button add an event that hides all paragraphs on click and an Off button removing this event.
