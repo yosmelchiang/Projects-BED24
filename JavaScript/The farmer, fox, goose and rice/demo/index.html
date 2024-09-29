@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox, Goose, and Rice Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .bank { margin: 20px; }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Farmer, Fox, Goose, and Rice Game</h1>
+    <div id="west" class="bank">
+        <h2>West Bank</h2>
+        <div id="west-resources"></div>
+    </div>
+    <div id="east" class="bank">
+        <h2>East Bank</h2>
+        <div id="east-resources"></div>
+    </div>
+    <button onclick="move('goose')">Take Goose</button>
+    <button onclick="move('fox')">Take Fox</button>
+    <button onclick="move('rice')">Take Rice</button>
+    <button onclick="returnAlone()">Return Alone</button>
+    <button onclick="resetGame()">Restart Game</button>
+    <p id="message"></p>
+
+    <script>
+        let state;
+
+        function initializeGame() {
+            state = {
+                west: ['farmer', 'fox', 'goose', 'rice'],
+                east: [],
+                farmer: 'west'
+            };
+            updateDisplay();
+            document.getElementById('message').innerText = ""; // Clear any messages
+        }
+
+        function updateDisplay() {
+            document.getElementById('west-resources').innerHTML = state.west.join(', ');
+            document.getElementById('east-resources').innerHTML = state.east.join(', ');
+        }
+
+        function isSafe(bank) {
+            const hasGoose = bank.includes('goose');
+            const hasFox = bank.includes('fox');
+            const hasRice = bank.includes('rice');
+            return !(hasGoose && hasFox && !bank.includes('farmer')) &&
+                   !(hasGoose && hasRice && !bank.includes('farmer'));
+        }
+
+        function checkWin() {
+            if (state.east.length === 4) {
+                document.getElementById('message').innerText = "Congratulations! You've successfully transported everything!";
+                return true;
+            }
+            return false;
+        }
+
+        function checkLoss() {
+            if (!isSafe(state.west) || !isSafe(state.east)) {
+                document.getElementById('message').innerText = "Oh no! Something was eaten! You lose!";
+                return true;
+            }
+            return false;
+        }
+
+        function move(resource) {
+            if (state.farmer === 'west') {
+                if (state.west.includes(resource)) {
+                    // Move the resource to the east bank along with the farmer
+                    state.west.splice(state.west.indexOf(resource), 1);
+                    state.east.push(resource);
+                    state.west.splice(state.west.indexOf('farmer'), 1);
+                    state.east.push('farmer');
+                    state.farmer = 'east'; // Farmer moves to east after taking a resource
+                    updateDisplay();
+
+                    // Check for loss condition after moving a resource
+                    if (checkLoss()) {
+                        return;
+                    }
+                }
+            } else if (state.farmer === 'east') { // Farmer is on the East bank
+                if (state.east.includes(resource)) {
+                    // The farmer can bring a resource back to the West bank
+                    state.east.splice(state.east.indexOf(resource), 1);
+                    state.west.push(resource);
+                    state.east.splice(state.east.indexOf('farmer'), 1);
+                    state.west.push('farmer');
+                    state.farmer = 'west'; // Farmer moves back to west after bringing a resource
+                    updateDisplay();
+
+                    // Check for loss condition after moving a resource back
+                    if (checkLoss()) {
+                        return;
+                    }
+                }
+            }
+
+            // Check for win condition
+            checkWin();
+        }
+
+        function returnAlone() {
+            if (state.farmer === 'east') {
+                // Farmer returns alone to West
+                state.east.splice(state.east.indexOf('farmer'), 1);
+                state.west.push('farmer');
+                state.farmer = 'west';
+                updateDisplay();
+
+                // Check for loss condition after returning alone
+                checkLoss();
+            }
+        }
+
+        function resetGame() {
+            initializeGame();
+        }
+
+        // Initialize the game on load
+        initializeGame();
+    </script>
+</body>
+</html>
