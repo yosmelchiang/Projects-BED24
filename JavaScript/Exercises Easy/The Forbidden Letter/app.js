@@ -7,11 +7,9 @@
  * forbiddenLetter("m", []) ➞ true
  * --
  */
-log = console.log
 
-// let myArray = ["rock", "paper", "scissors"];
-// let joined = myArray.join('')
-// log(joined.includes('r'))
+// Method 1
+log = console.log
 
 function forbiddenLetter(fLetter, array) {
     let joinedArr = array.join('')
@@ -27,3 +25,4 @@ function forbiddenLetter(fLetter, array) {
 forbiddenLetter('r', ["rock", "paper", "scissors"]) // false, r exists in the array
 forbiddenLetter('a', ["spoon", "fork", "knife"]) // true, a does not exist in the array
 forbiddenLetter('m', []) // true, m does not exist in the array
+

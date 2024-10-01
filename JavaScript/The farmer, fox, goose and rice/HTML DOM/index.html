@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <title>The Farmer, The Fox, The Goose and the Corn</title>
+  </head>
+  <body style="background-color: rgb(235, 157, 105)">
+    <div>
+      <h3>Solve the riddle</h3>
+      <pre>In this riddle, the Farmer is tasked with transporting a fox, a goose, and some corn across a river. 
+The goal is to get all three safely to the other side of the river without leaving anything in danger. 
+
+<strong>However, there are a few important rules to follow:</strong>
+The farmer can only carry one item at a time across the river.
+
+<strong><span style="color: red">Dangerous situations:</span></strong>
+If the fox is left alone with the goose without the farmer present, the fox will eat the goose.
+If the goose is left alone with the corn without the farmer, the goose will eat the corn.
+
+The riddle ends when you successfully transport all three across the river without any harm.
+
+Good luck, and make sure no one gets eaten!
+        </pre>
+    </div>
+    <div>
+      <h3>South Shore</h3>
+      <div id="southShore"></div>
+    </div>
+    <h1 style="color: lightblue">~~~~~~~~~~~~</h1>
+    <div>
+      <h3>North Shore</h3>
+      <div id="northShore"></div>
+    </div>
+    <br />
+    <div>
+      <button id="gooseBtn" onclick="move('Goose')">🪿 Move the Goose</button>
+      <button id="foxBtn" onclick="move('Fox')">🦊 Move the Fox</button>
+      <button id="cornBtn" onclick="move('Corn')">🌽 Move the Corn</button>
+      <button id="farmerBtn" onclick="move('Farmer')">👩‍🌾 Move the Farmer</button>
+    </div>
+    <br />
+    <div id="message"></div>
+  </body>
+</html>
