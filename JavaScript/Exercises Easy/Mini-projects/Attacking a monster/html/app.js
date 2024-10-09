@@ -1,9 +1,9 @@
 let sharkMan = { hp: 500, attack: 'Big Bite', dps: 50 };
 let character = { hp: 500, sword: 'Scimitar', dps: 23, rage: false, specialDps: 300 };
 
-let logElement = document.getElementById('log');
-let characterHpElement = document.getElementById('character-hp');
-let sharkManHpElement = document.getElementById('sharkman-hp');
+let logElement = document.getElementById("log");
+let characterHpElement = document.getElementById("character-hp");
+let sharkManHpElement = document.getElementById("sharkman-hp");
 
 function attack() {
   // Battle continues while both are alive
