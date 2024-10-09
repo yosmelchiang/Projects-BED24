@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character vs SharkMan Battle</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+      .battle-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 50px auto;
+        max-width: 800px;
+      }
+      .character,
+      .sharkman {
+        padding: 20px;
+        border: 2px solid black;
+        background-color: #fff;
+        width: 200px;
+      }
+      #battle-log {
+        margin: 30px auto;
+        max-width: 600px;
+        padding: 10px;
+        background-color: #e8e8e8;
+        border-radius: 8px;
+      }
+      .hp {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Character vs SharkMan Battle</h1>
+
+    <div class="battle-container">
+      <div class="character">
+        <img
+          src="https://static.wikia.nocookie.net/delicious-in-dungeon/images/d/d3/Transparent_Brigan.png"
+          style="width: auto; height: 200px"
+        />
+        <h2>Character</h2>
+        <p>HP: <span id="character-hp">500</span></p>
+        <p>Weapon: Scimitar</p>
+        <p>Damage: 23</p>
+      </div>
+
+      <div class="sharkman">
+        <img
+          src="https://static.wikia.nocookie.net/criticalrole/images/b/b2/Sahuagin_Warlock_of_Uk%27otoa.jpg"
+          style="width: auto; height: 200px"
+        />
+        <h2>SharkMan</h2>
+        <p>HP: <span id="sharkman-hp">500</span></p>
+        <p>Attack: Big Bite</p>
+        <p>Damage: 50</p>
+      </div>
+    </div>
+
+    <div id="battle-log">
+      <p id="log">Click "Attack" to start the battle!</p>
+    </div>
+
+    <button onclick="attack()">Attack</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
