@@ -14,7 +14,7 @@ function makeAppender(tagOpen, tagClose) {
   };
 }
 
-const myParagraphHTML = para('This is a long text inside a paragram');
+const myParagraphHTML = para('This is a long text inside a paragraph');
 const myDivHTML = div('This is a long text inside a div');
 
 const bracketWrapper = brackets('Bracket me up!')
