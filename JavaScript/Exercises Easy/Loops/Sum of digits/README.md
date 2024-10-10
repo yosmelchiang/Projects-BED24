@@ -1,0 +1,1 @@
+Write a function that takes a number as input, iterates through its digits, and returns the sum of its digits.
