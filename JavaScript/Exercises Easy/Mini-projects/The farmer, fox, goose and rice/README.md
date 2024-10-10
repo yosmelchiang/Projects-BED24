@@ -1,8 +1,9 @@
-We are going to create a web based game based on the riddle of The Farmer, The Goose, The Fox and the Corn
 
-*Prototypes*
-- 1. HTML Dom inline script
-- 2. Maybe spice it up with some bootstrap
+# The Farmer, fox, goose and rice
+
+Web based riddle of The Farmer, The Goose, The Fox and the Corn
+
+## Features, entities and methods
 
 *Entities*
 - Farmer
@@ -38,7 +39,6 @@ We are going to create a web based game based on the riddle of The Farmer, The G
 - Check where the farmer is so we cant move animals without him
 
 *Pseudo code*
-
 ```js
 init north shore []
 init south shore ['Farmer', 'Fox', 'Goose', 'Rice']
@@ -54,3 +54,6 @@ function move (resource) {
 }
 ```
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
