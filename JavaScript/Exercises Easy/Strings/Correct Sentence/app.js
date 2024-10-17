@@ -1,5 +1,15 @@
 log = console.log;
 
+/**
+ * The function correctSentence takes a text input, capitalizes the first letter if it is lowercase,
+ * and adds a period at the end if it is missing.
+ * @param text - The `correctSentence` function takes a string `text` as input and ensures that it
+ * starts with an uppercase letter and ends with a period. If the first character of the input string
+ * is lowercase, it converts it to uppercase. Additionally, if the last character of the input string
+ * is not a period
+ * @returns The function `correctSentence` takes a text input and ensures that the first character is
+ * capitalized and that the text ends with a period. The corrected text is then returned.
+ */
 function correctSentence(text) {
   const ISLOWER = text[0].toLowerCase();
 
